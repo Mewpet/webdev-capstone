@@ -29,7 +29,7 @@ h1{
 #nav{
     display:block;
 }
-nav>li{
+nav>ul{
     border:red 1px solid;
     display: flex;
     flex-direction: column;
