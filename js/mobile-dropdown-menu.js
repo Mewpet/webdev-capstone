@@ -6,7 +6,7 @@ const toggleNavBar = ()=>{
     if (nav.classList.contains("hidden")){ //if nav list is hidden, make it visible, switch buttons to close
         nav.classList.add("visible");
         nav.classList.remove("hidden");
-        menuButton.innerHTML="Ⓧ";
+        menuButton.innerHTML="ᚷ";
     }else{
         nav.classList.add("hidden");
         nav.classList.remove("visible");
