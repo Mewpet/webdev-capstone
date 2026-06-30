@@ -1,44 +1,67 @@
 body{
     margin:0;
     padding:0;
+    border:0;
 }
 header{
     padding:0 5%;
-    height:20vh;
 }
 #title-bar{
     display: grid;
     grid-template-columns: 75% 25%;
     align-items: center;
+    height:15vh;
+    border: red 1px solid;
 }
 h1{
     display: inline-block;
     font-size: 20vw;
     text-align: center;
+    border:0;
+    margin:0;
+    padding:0;
 }
 #menu-icon{
-    border: 1px red solid;
+    
     font-size: 20vw;
     display: inline;
     padding: 0;
+    border:0;
+    margin:0;
     text-align: center;
+    border: red 1px solid;
 }
 #menu-icon:hover{
     cursor:pointer;
 }
-#nav{
-    display:block;
-}
 nav>ul{
-    border:red 1px solid;
+    border: red 1px solid;
+    margin:0;
+    padding:0;
     display: flex;
     flex-direction: column;
     font-size:10vw;
+    list-style-type: none;
+    text-align: center;
+}
+nav a{
+    text-decoration: none;
+}
+
+.current-link{
+    
+}
+
+@keyframes drop-down{
+    from{top:-30px;
+    opacity: 0}
+    to{top:0px; opacity:1};
 }
 
 .hidden{
     display:none;
 }
 .visible{
-    display:block;
+    position:relative;
+    animation:drop-down .8s;
 }

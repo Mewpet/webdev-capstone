@@ -4,6 +4,11 @@ let menuButton = document.getElementById("menu-icon");
 menuButton.addEventListener("click", ()=>{
     //if(menu.style.display=="")
     //nav.style.display = "none";
-    console.log(nav.style.display);
-    console.log(nav.style);
+    if (nav.classList.contains("hidden")){
+        nav.classList.add("visible");
+        nav.classList.remove("hidden");
+    }else{
+        nav.classList.add("hidden");
+        nav.classList.remove("visible");
+    }
 })
