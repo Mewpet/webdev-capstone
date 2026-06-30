@@ -18,6 +18,7 @@ menuButton.addEventListener("click", ()=>{
     toggleNavBar();
 })
 
-menuButton.addEventListener("keydown", ()=>{
+menuButton.addEventListener("keydown", (event)=>{
+    if(event.key=="Tab")return; //stop from opening on tab press
     toggleNavBar();
 })
