@@ -72,6 +72,22 @@ nav a:hover{
     position:relative;
     animation:drop-down .8s;
 }
+#carousel{
+    display:grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+#carousel span{
+    border:1px black solid;
+    font-size: 50px;
+}
+#carousel img{
+    display:inline-block;
+    width:50vw;
+    height:50vw;
+    border:1px black solid;
+}
 
 @media screen and (min-width:700px){
     #menu-icon{
