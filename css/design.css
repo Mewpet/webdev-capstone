@@ -1,6 +1,7 @@
 :root{
     --main-colour: black;
     --accent-colour:purple;
+    --normal-font-size:min(5vw, 25px);
 }
 
 body{
@@ -8,6 +9,9 @@ body{
     padding:0;
     border:0;
     
+}
+p{
+    padding: 2% 5%;
 }
 header{
     padding:0 5%;
@@ -80,7 +84,10 @@ header{
 main{
     display: flex;
     flex-direction: column;
-    min-height:80vh;
+    min-height:50vh;
+}
+#intro{
+    font-size: var(--normal-font-size);
 }
 #carousel{
     display:grid;
@@ -102,21 +109,35 @@ main{
 }
 footer{
     height:250px;
-    background-color: darkblue;
+    display: grid;
+    margin-top:5%;
+    /* background-color: darkblue;
     background-image: url("../images/landscape snowy forest.jpg");
-    background-size: cover;
-    background-position: bottom;
-    opacity: 0.8;
-    align-content: end;
+    background-size:cover;
     
+    background-position: bottom;
+    opacity: 0.8; */
+    
+}
+footer img{
+    position:absolute;
+    opacity:0.8;
+    width:100vw;
+    height:250px;
+    object-fit: cover;
+    z-index: -1;
 }
 footer p{
     color: white;
     text-shadow: 3px 3px 10px black;
     margin:2%;
+    align-self: end;
 }
 
 @media screen and (min-width:700px){
+    p{
+        padding: 2% 10%;
+    }
     #menu-icon{
         display:none;
     }
