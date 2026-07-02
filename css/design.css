@@ -1,7 +1,7 @@
 :root{
     --main-colour: black;
     --accent-colour:purple;
-    --normal-font-size:min(5vw, 25px);
+    --normal-font-size:min(25px, 10vw);
 }
 
 body{
@@ -11,7 +11,9 @@ body{
     
 }
 p{
-    padding: 2% 5%;
+    padding: 1% 5%;
+    font-size: var(--normal-font-size);
+
 }
 header{
     padding:0 5%;
@@ -82,12 +84,15 @@ header{
     animation:drop-down .8s;
 }
 main{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     min-height:50vh;
 }
-#intro{
-    font-size: var(--normal-font-size);
+#inline-picture{
+    justify-self:center;
+    width:75vw;
+    aspect-ratio: 1;
+    border: 1px red solid;
 }
 #carousel{
     display:grid;
@@ -143,6 +148,13 @@ footer p{
     }
     #title-bar{
         grid-template-columns: 1fr;
+    }
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+    #inline-picture{
+        display:inline-block;
+        width:min(50vw, 500px);
     }
     nav{
         display:block !important;
