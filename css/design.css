@@ -91,7 +91,7 @@ header{
 #carousel img{
     display:inline-block;
     width:100%;
-    aspect-ratio: 1.1;
+    aspect-ratio: 1.3;
     max-height: 50vh;
     border:1px black solid;
     object-fit: cover;
