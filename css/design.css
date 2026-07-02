@@ -7,6 +7,7 @@ body{
     margin:0;
     padding:0;
     border:0;
+    
 }
 header{
     padding:0 5%;
@@ -76,6 +77,11 @@ header{
     position:relative;
     animation:drop-down .8s;
 }
+main{
+    display: flex;
+    flex-direction: column;
+    min-height:80vh;
+}
 #carousel{
     display:grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -92,6 +98,22 @@ header{
     aspect-ratio: 1;
     max-height: 60vh;
     object-fit: cover;
+    
+}
+footer{
+    height:250px;
+    background-color: darkblue;
+    background-image: url("../images/landscape snowy forest.jpg");
+    background-size: cover;
+    background-position: bottom;
+    opacity: 0.8;
+    align-content: end;
+    
+}
+footer p{
+    color: white;
+    text-shadow: 3px 3px 10px black;
+    margin:2%;
 }
 
 @media screen and (min-width:700px){
