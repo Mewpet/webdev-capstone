@@ -135,6 +135,20 @@ main>div{
 .landscape{
     object-fit: cover;
 }
+#enlarged-image{
+    position:fixed;
+    width:100vw;
+    height:120vh;
+    left:0px;
+    top:0px;
+    align-content: center;
+    background-color: rgba(20, 20, 20, 0.75);
+}
+#enlarged-image img{
+    width:75vw;
+    display:block;
+    margin: 0 auto;
+}
 
 footer{
     height:250px;
