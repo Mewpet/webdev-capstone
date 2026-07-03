@@ -144,6 +144,7 @@ main>div{
 #carousel button{
     padding: 5%;
     font-size: 50px;
+    cursor:pointer;
 }
 #carousel img{
     display:inline-block;
@@ -289,4 +290,18 @@ footer p{
     .images{
         grid-template-columns: 1fr 1fr 1fr;
     }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .fade-out{
+        animation:none !important;
+    }
+    .fade-in{
+        animation:none !important;
+    }
+    nav a:hover{
+        color:var(--accent-colour);
+        transform:none;
+    }
+    .visible{animation:none;}
 }

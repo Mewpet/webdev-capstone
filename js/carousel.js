@@ -16,8 +16,11 @@ let left = document.getElementById("carousel-left");
 let carouselImage = document.getElementById("carousel-image");
 
 let isAutomatic = true;
-let carouselTimeout = 5000;
+let carouselTimeout = 7500;
 let carouselTimer;
+
+//accesibility
+//prefers reduced motion
 
 carouselImage.setAttribute("src",images[currentPos]);
 
@@ -51,7 +54,7 @@ const updateCarouselImage = ()=>{
     //wait 1 second
     setTimeout(()=>{carouselImage.setAttribute("src", images[currentPos]);
     carouselImage.classList.remove("fade-out");
-    carouselImage.classList.add("fade-in");},1000);
+    carouselImage.classList.add("fade-in");},600);
     
 }
 
