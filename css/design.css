@@ -166,7 +166,8 @@ main>div{
     box-shadow: 0px 0px 5px var(--mid-colour);
 }
 .portrait{
-    object-fit:scale-down;
+    object-fit: cover;
+    height: 100%;
 }
 .landscape{
     object-fit: cover;
@@ -176,7 +177,7 @@ main>div{
     flex-direction: column;
     position:fixed;
     width:100vw;
-    height:120vh;
+    height:100vh;
     left:0px;
     top:0px;
     align-items: center;
@@ -185,7 +186,9 @@ main>div{
 }
 #enlarged-image img{
     max-height:60vh;
+    height:fit-content;
     max-width:80vw;
+    object-fit: contain;
     display:block;
     margin: 0 auto;
     box-shadow: 0px 0px 10px black;
@@ -265,6 +268,9 @@ footer p{
     }
     .landscape{
         height:100%;
+    }
+    #enlarged-image img{
+        height:fit-content;
     }
 }
 
