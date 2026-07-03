@@ -1,4 +1,4 @@
-//pictures in the carousel
+//pictures
 let img1 = "../images/black and white forest.jpg";
 let img2 = "../images/landscape papyrus undyne.jpg";
 let img3 = "../images/landscape snowy forest.jpg";
@@ -6,7 +6,8 @@ let img4 = "../images/landscape youre blue now.jpg";
 let img5 = "../images/portrait miya butterfly.jpg";
 let img6 = "../images/splash art sans gaster blaster.jpg";
 
-let images = [img1, img2, img3, img4, img5, img6];
+//pictures the carousel rotates through
+let images = [img2, img3, img4, img6];
 let currentPos = 0;
 
 let right = document.getElementById("carousel-right");
