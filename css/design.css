@@ -108,7 +108,7 @@ header{
     animation:fade-in 1s;
 }
 .hidden{
-    display:none !important;
+    display:none;
 }
 .visible-no-animation{
     position:relative;
@@ -172,7 +172,8 @@ main>div{
 .landscape{
     object-fit: cover;
 }
-#enlarged-image{
+.enlarged-image{
+    animation:fade-in 0.5s;
     display:flex;
     flex-direction: column;
     position:fixed;
@@ -184,7 +185,7 @@ main>div{
     justify-content: center;
     background-color: rgba(20, 20, 20, 0.75);
 }
-#enlarged-image img{
+.enlarged-image img{
     max-height:60vh;
     height:fit-content;
     max-width:80vw;
@@ -193,7 +194,7 @@ main>div{
     margin: 0 auto;
     box-shadow: 0px 0px 10px black;
 }
-#enlarged-image p{
+.enlarged-image p{
     text-align: center;
     margin:10px;
     color: white;

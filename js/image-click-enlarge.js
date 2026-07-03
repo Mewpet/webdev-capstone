@@ -2,6 +2,7 @@
 let images = document.querySelectorAll(".images>img");
 let enlargedImageDiv = document.getElementById("enlarged-image");
 
+
 //add click event to all the images
 images.forEach(image => {
     image.setAttribute("tabindex","0");
@@ -9,7 +10,6 @@ images.forEach(image => {
         openEnlargedImage(image);
     })
     image.addEventListener("keypress",(event)=>{
-        console.log(event);
         if(event.key=="Enter" || event.key==" "){
             if(enlargedImageDiv.classList.contains("hidden")){
                 openEnlargedImage(image);
@@ -31,7 +31,7 @@ enlargedImageDiv.addEventListener("keypress", (event)=>{
 })
 
 const openEnlargedImage = (image)=>{
-        enlargedImageDiv.classList.add("visible-no-animation");
+        enlargedImageDiv.classList.add("enlarged-image");
         enlargedImageDiv.classList.remove("hidden");
         enlargedImageDiv.appendChild(image.cloneNode());
 
@@ -43,5 +43,6 @@ const openEnlargedImage = (image)=>{
 }
 const closeEnlargedImage = (image)=>{
     enlargedImageDiv.classList.add("hidden");
+    enlargedImageDiv.classList.remove("enlarged-image");
     enlargedImageDiv.innerHTML="";
 }
