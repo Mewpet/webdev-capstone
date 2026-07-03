@@ -2,6 +2,7 @@
     --main-colour: #221b2b;
     --mid-colour: #728FAB;
     --accent-colour:#4278ab;
+    --bright-colour:rgba(255,255,255,.8);
     --background-colour:linear-gradient(0deg, white 0%, #f5fcff 80%);
     --normal-font-size:min(25px, 10vw);
 }
@@ -13,6 +14,9 @@ body{
     border:0;
     color: var(--main-colour);
     background: var(--background-colour);
+}
+a{
+    color: #4278ab;
 }
 p{
     max-width: 80%;
@@ -304,4 +308,24 @@ footer p{
         transform:none;
     }
     .visible{animation:none;}
+}
+@media (prefers-color-scheme: dark) {
+    body{
+        color: var(--bright-colour);
+        background:none;
+        background-color: var(--main-colour);
+    }
+    nav a{
+        color:var(--accent-colour);
+    }
+    .current-link{
+        color: var(--mid-colour);
+    }
+    nav a:hover{
+        color:var(--bright-colour);
+    }
+}
+
+@media (prefers-contrast: less) {
+    body{color:var(--accent-colour)};
 }
