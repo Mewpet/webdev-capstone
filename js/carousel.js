@@ -14,22 +14,39 @@ let left = document.getElementById("carousel-left");
 
 let carouselImage = document.getElementById("carousel-image");
 
+let carouselTimeout = 5000;
+
 carouselImage.setAttribute("src",images[currentPos]);
 
 right.addEventListener("click",()=>{
-    currentPos++;
-    currentPos=currentPos%images.length;
-    console.log(currentPos);
-    updateCarouselImage();
+    carouselRight();
 })
 
 left.addEventListener("click", ()=>{
+    carouselLeft();
+})
+
+const carouselLeft = ()=>{
     currentPos--;
     if(currentPos<0)currentPos=images.length-1;
     updateCarouselImage();
-})
+}
+
+const carouselRight = ()=>{
+    currentPos++;
+    currentPos=currentPos%images.length;
+    updateCarouselImage();
+}
 
 const updateCarouselImage = ()=>{
     carouselImage.setAttribute("src", images[currentPos]);
 }
+
+const startCarouselTimer = ()=>{
+    courselTimer = setTimeout(()=>{
+        carouselRight();
+        startCarouselTimer();
+    }, carouselTimeout);
+}
+startCarouselTimer();
 

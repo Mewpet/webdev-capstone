@@ -100,7 +100,7 @@ main>div{
 }
 #carousel{
     display:grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 6fr 1fr;
     align-items: center;
     justify-items: center;
 }
@@ -111,7 +111,7 @@ main>div{
 #carousel img{
     display:inline-block;
     width:100%;
-    aspect-ratio: 1;
+    aspect-ratio: 1.1;
     max-height: 60vh;
     object-fit: cover;
     
