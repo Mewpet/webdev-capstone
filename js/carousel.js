@@ -15,25 +15,31 @@ let left = document.getElementById("carousel-left");
 
 let carouselImage = document.getElementById("carousel-image");
 
+let isAutomatic = true;
 let carouselTimeout = 5000;
+let carouselTimer;
 
 carouselImage.setAttribute("src",images[currentPos]);
 
 right.addEventListener("click",()=>{
+    clearTimeout(carouselTimer);
     carouselRight();
 })
 
 left.addEventListener("click", ()=>{
+    clearTimeout(carouselTimer);
     carouselLeft();
 })
 
 const carouselLeft = ()=>{
+   
     currentPos--;
     if(currentPos<0)currentPos=images.length-1;
     updateCarouselImage();
 }
 
 const carouselRight = ()=>{
+    
     currentPos++;
     currentPos=currentPos%images.length;
     updateCarouselImage();
@@ -50,7 +56,8 @@ const updateCarouselImage = ()=>{
 }
 
 const startCarouselTimer = ()=>{
-    courselTimer = setTimeout(()=>{
+    if (!isAutomatic)return;
+    carouselTimer = setTimeout(()=>{
         carouselRight();
         startCarouselTimer();
     }, carouselTimeout);
