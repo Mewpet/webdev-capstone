@@ -11,7 +11,7 @@ body{
     
 }
 p{
-    padding: 1% 5%;
+    padding: 1% 3%;
     font-size: var(--normal-font-size);
 
 }
@@ -88,6 +88,10 @@ main{
     grid-template-columns: 1fr;
     min-height:50vh;
 }
+main>div{
+        justify-self: center;
+        max-width:75vw;
+    }
 #inline-picture{
     justify-self:center;
     width:75vw;
@@ -140,9 +144,6 @@ footer p{
 }
 
 @media screen and (min-width:700px){
-    p{
-        padding: 2% 10%;
-    }
     #menu-icon{
         display:none;
     }
@@ -150,10 +151,16 @@ footer p{
         grid-template-columns: 1fr;
     }
     main{
-        grid-template-columns: 1fr 1fr;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    main>div{
+        max-width:80vw;
     }
     #inline-picture{
         display:inline-block;
+        margin:2%;
         width:min(50vw, 500px);
     }
     nav{
@@ -164,6 +171,15 @@ footer p{
         justify-content: space-around;
     }
     #carousel img{
+        margin: 5%;
         aspect-ratio: 1.3;
     }
+}
+
+@media screen and (min-width:1000px){
+    main>.content{
+        max-width:calc(100vw - 600px);
+        align-self: center;
+    }
+    
 }
