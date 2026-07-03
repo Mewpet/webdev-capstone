@@ -75,9 +75,17 @@ header{
     opacity: 0}
     to{top:0px; opacity:1};
 }
+@keyframes fade-in{
+    from{opacity:0}
+    to{opacity:1};
+}
 
 .hidden{
-    display:none;
+    display:none !important;
+}
+.visible-no-animation{
+    position:relative;
+    animation:fade-in 0.5s;
 }
 .visible{
     position:relative;
@@ -136,18 +144,26 @@ main>div{
     object-fit: cover;
 }
 #enlarged-image{
+    display:flex;
+    flex-direction: column;
     position:fixed;
     width:100vw;
     height:120vh;
     left:0px;
     top:0px;
-    align-content: center;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(20, 20, 20, 0.75);
 }
 #enlarged-image img{
-    width:75vw;
+    width:80vw;
     display:block;
     margin: 0 auto;
+}
+#enlarged-image p{
+    margin:10px;
+    color: white;
+    max-width:70vw;
 }
 
 footer{
