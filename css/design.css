@@ -116,6 +116,26 @@ main>div{
     object-fit: cover;
     
 }
+.images{
+    width:90vw;
+    display:grid;
+    gap: 2vw;
+    justify-items: center;
+    align-items: center;
+}
+.images img{
+    width:90vw;
+    max-height: 60vh;
+    
+
+}
+.portrait{
+    object-fit:scale-down;
+}
+.landscape{
+    object-fit: cover;
+}
+
 footer{
     height:250px;
     display: grid;
@@ -175,6 +195,15 @@ footer p{
         margin: 5%;
         aspect-ratio: 1.3;
     }
+    .images{
+        grid-template-columns: 1fr 1fr;
+    }
+    .images img{
+        width:100%;
+    }
+    .landscape{
+        height:100%;
+    }
 }
 
 @media screen and (min-width:1000px){
@@ -186,5 +215,7 @@ footer p{
         aspect-ratio: 2;
         width:70vw;
     }
-    
+    .images{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
