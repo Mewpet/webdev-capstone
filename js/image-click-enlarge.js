@@ -4,7 +4,33 @@ let enlargedImageDiv = document.getElementById("enlarged-image");
 
 //add click event to all the images
 images.forEach(image => {
+    image.setAttribute("tabindex","0");
     image.addEventListener("click",()=>{
+        openEnlargedImage(image);
+    })
+    image.addEventListener("keypress",(event)=>{
+        console.log(event);
+        if(event.key=="Enter" || event.key==" "){
+            if(enlargedImageDiv.classList.contains("hidden")){
+                openEnlargedImage(image);
+                image.focus();
+            }else{
+                closeEnlargedImage();
+            }
+            
+        }
+        
+    })
+});
+
+enlargedImageDiv.addEventListener("click", ()=>{
+    closeEnlargedImage();
+})
+enlargedImageDiv.addEventListener("keypress", (event)=>{
+    //closeEnlargedImage();
+})
+
+const openEnlargedImage = (image)=>{
         enlargedImageDiv.classList.add("visible-no-animation");
         enlargedImageDiv.classList.remove("hidden");
         enlargedImageDiv.appendChild(image.cloneNode());
@@ -14,6 +40,8 @@ images.forEach(image => {
         p.innerText = image.getAttribute("alt");
         p.setAttribute("id", "enlarged-image-description");
         enlargedImageDiv.appendChild(p);
-        console.log(p);
-    })
-});
+}
+const closeEnlargedImage = (image)=>{
+    enlargedImageDiv.classList.add("hidden");
+    enlargedImageDiv.innerHTML="";
+}
