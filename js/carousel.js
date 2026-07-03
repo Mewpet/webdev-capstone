@@ -40,7 +40,13 @@ const carouselRight = ()=>{
 }
 
 const updateCarouselImage = ()=>{
-    carouselImage.setAttribute("src", images[currentPos]);
+    carouselImage.classList.remove("fade-in");
+    carouselImage.classList.add("fade-out");
+    //wait 1 second
+    setTimeout(()=>{carouselImage.setAttribute("src", images[currentPos]);
+    carouselImage.classList.remove("fade-out");
+    carouselImage.classList.add("fade-in");},1000);
+    
 }
 
 const startCarouselTimer = ()=>{
