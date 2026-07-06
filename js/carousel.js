@@ -21,6 +21,7 @@ let carouselTimer;
 
 //accesibility
 //prefers reduced motion
+//aria tags to open and close in here
 
 carouselImage.setAttribute("src",images[currentPos]);
 
