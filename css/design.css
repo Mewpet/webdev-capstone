@@ -149,6 +149,9 @@ main{
     grid-template-columns: 1fr;
     min-height:50vh;
 }
+main .content{
+     display:grid;
+    }
 main>div{
         justify-self: center;
         max-width:90vw;
@@ -157,7 +160,7 @@ main>div{
     justify-self:center;
     width:75vw;
     aspect-ratio: 1;
-    border: 1px red solid;
+    border-radius: 5%;
 }
 #carousel{
     display:grid;
@@ -271,10 +274,11 @@ footer p{
     main>div{
         max-width:80vw;
     }
+    
     #inline-picture{
         display:inline-block;
         margin:2%;
-        width:min(50vw, 500px);
+        width:500px;
     }
     nav{
         display:block !important;
