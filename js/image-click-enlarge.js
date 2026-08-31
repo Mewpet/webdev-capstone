@@ -37,7 +37,7 @@ const openEnlargedImage = (image)=>{
 
         //add the alt text
         let p = document.createElement("p");
-        p.innerText = image.getAttribute("alt");
+        p.innerText = image.getAttribute("description");
         p.setAttribute("id", "enlarged-image-description");
         enlargedImageDiv.appendChild(p);
 }
